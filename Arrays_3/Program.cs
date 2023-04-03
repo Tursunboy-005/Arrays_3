@@ -10,7 +10,8 @@ namespace Arrays_3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine();
+            int a = 5;
+            int[] array = { 1, a, 3 };
         }
     }
 }
