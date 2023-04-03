@@ -10,20 +10,37 @@ namespace Arrays_3
     {
         static void Main(string[] args)
         {
-            int[,] myArray =
+           Random rand = new Random();
+
+            int m = rand.Next(2, 5);
+            int n = rand.Next(2, 5);
+
+            int[,] myArray = new int[m, n];
+            for (int i = 0;i < m;i++)
             {
-                { 1, 2, 3, 4 },
-                { 4, 3, 2, 6 },
-                { 9, 8, 7, 8 },
-                { 6, 3, 6, 7 },
-            };
+                for (int j = 0;j < n;j++)
+                {
+                    myArray[i,j] = rand.Next(100);
+                }
+            }
+
+            Console.WriteLine("Random Massiv: ");
+            for(int i = 0; i < m; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    Console.Write("{0}\t", myArray[i, j]);
+                }
+                Console.WriteLine();
+            }
+
 
             int Max = myArray[0,0];
             int Min = myArray[0,0];
 
-            for (int i = 0; i < myArray.GetLength(0); i++)
+            for (int i = 0; i < m; i++)
             {
-                for(int j = 0; j < myArray.GetLength(1); j++ )
+                for(int j = 0; j < n; j++ )
                 {
                     if (myArray[i, j] > Max)
                     {
