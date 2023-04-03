@@ -34,7 +34,7 @@ namespace Arrays_3
                 Console.WriteLine();
             }
 
-            Console.Write(" k butun son kiriting : ");
+            Console.Write(" kerakli ustunni  kiriting : ");
             int k = int.Parse(Console.ReadLine());
 
             int sum = 0;
